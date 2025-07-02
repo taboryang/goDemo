@@ -27,7 +27,7 @@ This document highlights the basic characteristics of Golang compared with both 
   2. Tells Go how to resolve imports, track dependencies, and manage versions.
 - **Package:** Declared using the `package` keyword. Go package names are concise and do not necessarily match the directory path. Go imports entire packages, not individual types.
 
-**Demo:** [`pkg/struct`](pkg/struct/main.go)
+**Demo:** [`pkg/struct`](pkg/struct/composition/demo.go)
 
 ---
 
@@ -54,7 +54,7 @@ This document highlights the basic characteristics of Golang compared with both 
 | Polymorphism           | Yes (class hierarchy)   | Yes (interfaces)                  |
 | Multiple inheritance   | No (Java) / Yes (C++)   | Yes (multiple embedding)          |
 
-**Demo:** [`pkg/struct`](pkg/struct/main.go)
+**Demo:** [`pkg/struct`](pkg/struct/composition/demo.go)
 
 ---
 
@@ -71,7 +71,7 @@ This document highlights the basic characteristics of Golang compared with both 
 | Large struct                     | Pointer receiver      | Avoid expensive copying              |
 | Small and immutable struct       | Value receiver        | Safe and sometimes more efficient    |
 
-**Demo:** [`pkg/pointer`](pkg/pointer/main.go)
+**Demo:** [`pkg/pointer`](pkg/pointer/demo/demo.go)
 
 ---
 
