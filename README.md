@@ -59,10 +59,12 @@ This document highlights the basic characteristics of Golang compared with both 
 ---
 
 ## Pointer vs Reference
-
-- **Java:** No pointers, only references.
-- **C++:** Supports both pointers and references.
-- **Go:** Methods can use value or pointer receivers, affecting behavior.
+### Java
+-  No pointers, only references.
+### C++
+- Supports both pointers and references.
+### Go
+- Methods can use value or pointer receivers, affecting behavior.
 
 | Use Case                        | Use a...              | Why                                 |
 |----------------------------------|-----------------------|--------------------------------------|
@@ -76,10 +78,11 @@ This document highlights the basic characteristics of Golang compared with both 
 ---
 
 ## New vs Make
-
-- **C/C++:** `new` & `delete`
-- **Java:** `new` creates an object on the heap; garbage collector releases objects (no `delete`)
-- **Go:**
+### C/C++
+-  `new` & `delete`
+### Java
+- `new` creates an object on the heap; garbage collector releases objects (no `delete`)
+### Go
 
 | Feature      | `new(T)`                    | `make(T)` (slice, map, channel only) |
 |--------------|-----------------------------|--------------------------------------|
@@ -96,9 +99,10 @@ This document highlights the basic characteristics of Golang compared with both 
 ---
 
 ## Stack vs Heap
-
-- **C/C++/Java:** `new` creates an object on the heap; reference itself is allocated on the stack.
-- **Go:** Escape analysis determines allocation:
+### C/C++
+-  `new` creates an object on the heap; reference itself is allocated on the stack.
+### Go
+- Escape analysis determines allocation:
   - Used only inside current function → **Stack**
   - Returned or referenced outside → **Heap**
 
@@ -107,21 +111,21 @@ This document highlights the basic characteristics of Golang compared with both 
 ---
 
 ## Visibility
-
-- **C/C++/Java:** `public`/`private`/`protected`
-- **Go:**
+### C/C++/Java
+- `public`/`private`/`protected`
+### Go
   - Starts with uppercase (exported): **Public** (any package)
   - Starts with lowercase (unexported): **Private** (same package only)
-  - Applies to structs, methods, functions, variables, constants, interfaces.
+  - Applies to `structs, methods, functions, variables, constants, interfaces`.
 
 **Demo:** [`pkg/visibility`](pkg/visibility/main.go)
 
 ---
 
 ## Generics
-
-- **C++:** Generics via templates.
-- **Java vs Go:**
+### C++
+- Generics via templates.
+### Java vs Go
 
 | Feature           | Java Generics                | Go Generics                        |
 |-------------------|-----------------------------|------------------------------------|
